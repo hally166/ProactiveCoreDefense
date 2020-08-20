@@ -49,6 +49,7 @@ By default I have left the $OP keyword in, but if you have a BD machine you will
 ### Testing
 There are two ways to test that it works; using RStudio or running it though the command line.  To run it in the command line click on 'Start' type 'CMD' and open the command line.  Then navigate to the PowerScript file and run it 
 > PowerShell.exe -ExecutionPolicy ByPass -File Q:\User_QC\QCScriptPwrShell.ps1
+
 If this does not work, try running it in RStudio and do some troubleshooting.  I'll make a FAQ and video later.
 
 You should end up with an excel spreadsheet with the data including links to the image files and a new folder with the images inside.
