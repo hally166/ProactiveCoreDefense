@@ -55,3 +55,9 @@ If this does not work, try running it in RStudio and do some troubleshooting.  I
 You should end up with an excel spreadsheet with the data including links to the image files and a new folder with the images inside.
 
 You can deploy this multiple times from the same network location, but you will need to make multiple copies of the R and ps1 file so that you have one set per machine.  Originally I had this work automatically by taking the $CYT keyword, but there are inconstancies across manufacturers in the use of FCS file keywords and it would have caused issues if you had not set up unique names for each of your instruments.
+
+# TODO
+* Probably make it so only problamatic files are listed in the spreadsheet.
+* The email feature was pretty cool, I'll work on that.
+* Installer
+
