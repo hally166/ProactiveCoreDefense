@@ -8,7 +8,7 @@ The primary differences are:
 * Moved most of the workload into functions to help with portability across instruments
 * Removed the Sanger specific statistics  
 * Moved most of the variables to the first lines to help with setup
-* Removed the ability to email the core.  This was very problematic and insecure.  Now the data is saved to an Excel file and the image output is the default one form flowCut
+* Removed the ability to email the core.  This was very problematic and insecure.  Now the data is saved to an Excel file and the image output is the default one from flowCut
 
 The idea here is to test user sample quality by checking time vs fluorescence, as we do during analysis, but at the time of acquisition.  This allows the core facility to be proactive helping our users spot problematic experiments and allows us to check for machine issues, such as recurrent blockages. 
 
@@ -60,4 +60,5 @@ You can deploy this multiple times from the same network location, but you will 
 * Probably make it so only problamatic files are listed in the spreadsheet.
 * The email feature was pretty cool, I'll work on that.
 * Installer
+* Real-time
 
