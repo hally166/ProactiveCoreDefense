@@ -34,14 +34,16 @@ You may be asked for some user input, I normally select 'no'.
 ### On the network or flow cytometer PC
 * Download the QC Script R file and ps1 file and save them to the network or local PC
 * Open the file and change the options at the top.  It is explained in the script
-* Now the hardest part.  Flow Cytometer manufacturers are incapable of producing consistent fcs files.  One of the options is to record and to count the number of users, which is very useful. Sadly, the manufacturers record this is different ways {sigh}.  Look for the following section and you will see some parts commented out using the # character.  Add or remove these depending on your instrument. By default I have left the $OP keyword in, but if you have a BD machine you will need to add a # to the start of this line and remove the one on the line that uses the 'EXPORT USER NAME' keyword. If you are having issues here, or if the number of images and rows on the spreadsheet don't match, then you need to load an FCS file and work out which keyword is being used.
+* Now the hardest part.  Flow Cytometer manufacturers are incapable of producing consistent fcs files.  One of the options is to record and to count the number of users, which is very useful. Sadly, the manufacturers record this is different ways {sigh}.  Look for the following section and you will see some parts commented out using the # character.  Add or remove these depending on your instrument. 
 ```R
 #function to perform the flowCut procedure and return the results
 flowCut_data<- function(ff){
 ```
+By default I have left the $OP keyword in, but if you have a BD machine you will need to add a # to the start of this line and remove the one on the line that uses the 'EXPORT USER NAME' keyword. If you are having issues here, or if the number of images and rows on the spreadsheet don't match, then you need to load an FCS file and work out which keyword is being used.
+
 * Save the file and close it.
 * Open the ps1 file (PowerShell) and change the R path to where yours is and the R script path to where that is too.  Save the file and close. 
-* Go to task manager and add a new daily task that runs the R script though PowerShell.exe with this arguemnt (or similar)
+* Go to task scheduler in Windows and add a new daily task that runs the R script though PowerShell.exe with this arguemnt (or similar)
 > -ExecutionPolicy ByPass -File Q:\User_QC\QCScriptPwrShell.ps1
 
 ### Testing
