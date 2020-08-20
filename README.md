@@ -16,7 +16,7 @@ It finds the fcs files produced since that last operation and runs them through 
 
 The output currently looks like this.
 
-![example image](/example.png)
+![example image](/example.PNG)
 
 The big question is; how do you report this to the user?  We are still working on that.
 
