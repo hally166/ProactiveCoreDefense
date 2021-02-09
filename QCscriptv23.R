@@ -84,7 +84,7 @@ files2cut<-as.list(row.names(files2cut))
 files2cut_noPerf <- files2cut
 #files2cut_noPerf <- files2cut[!grepl("PerformanceTestResults", files2cut)] #use this line to use REGEX to exclude certain files, like performace checks
 
-flowCut_rsults = data.frame()
+flowCut_results = data.frame()
 for (file in files2cut_noPerf) {
   try({flowCut_results <- rbind(flowCut_results,flowCut_data(loadNtransform(file)))},silent = TRUE)
 }
